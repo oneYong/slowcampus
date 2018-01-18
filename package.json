@@ -1,0 +1,26 @@
+{
+  "name": "slowcampus",
+  "version": "1.0.0",
+  "description": "HELLO SLOW CAMPUS !!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oneYong/slowcampus.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oneYong/slowcampus/issues"
+  },
+  "homepage": "https://github.com/oneYong/slowcampus#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongodb": "^3.0.1",
+    "mongoose": "^4.11.2",
+    "mongoose-auto-increment": "^5.0.1"
+  }
+}
