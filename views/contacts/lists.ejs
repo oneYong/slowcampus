@@ -1,0 +1,27 @@
+<% include ../layout/header.ejs %>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>이름</th>
+        <th>작성일</th>
+        <th>삭제</th>
+    </tr>
+    <% lists.forEach( function(list){ %>
+    <tr>
+        <td>
+            <a href="/contacts/detail/<%=list.id%>"><%=list.name%></a>
+        </td>
+        <td>
+            <%=list.getDate.year%>-<%=list.getDate.month%>-<%=list.getDate.day%>
+            <%=list.getDate.hour%>:<%=list.getDate.minute%>
+        </td>
+        <td>
+            <a href="/contacts/delete/<%=list.id%>" class="btn btn-danger" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
+        </td>
+    </tr>
+    <%});%>
+</table>
+
+<a href="/contacts/write" class="btn btn-default">작성하기</a>
+
+<% include ../layout/footer.ejs %>

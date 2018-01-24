@@ -1,0 +1,22 @@
+<% include ../layout/header.ejs %>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <%=list.name%>
+    </div>
+    <div class="panel-body">
+        <div style="padding-bottom: 10px">
+            작성일 :
+            <%=list.getDate.year%>-<%=list.getDate.month%>-<%=list.getDate.day%>
+            <%=list.getDate.hour%>:<%=list.getDate.minute%>
+        </div>
+
+        <%=list.description%>
+
+    </div>
+</div>
+
+<a href="/contacts" class="btn btn-default">목록으로</a>
+<a href="/contacts/edit/<%=list.id%>" class="btn btn-primary">수정</a>
+
+<% include ../layout/footer.ejs %>

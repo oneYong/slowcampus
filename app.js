@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 
 var mongo = require('./mongo/conn');
 var admin = require('./routes/admin');
+var contacts = require('./routes/contacts');
 
 var app = express();
 var port = 3001;
@@ -24,6 +25,7 @@ app.get('/', function(req,res){
 
 // Routing
 app.use('/admin', admin);
+app.use('/contacts',contacts);
 
 app.listen( port, function(){
     console.log('Express listening on port', port);
